@@ -45,59 +45,271 @@
 
 				<section class="center" data-background="images/flatiron.jpg">
 					<section id="title-slide" class="center">
-						<h2>Presentation Title</h2>
-						<p>Your Name / @twitter / alleyinteractive.com</p>
-					</section>
-
-					<section class="center">
-						<h2><img src="images/logo.png" alt="Alley Interactive" id="title-logo" /></h2>
-
-						<ul>
-							<li>We build big websites for leaders in media,<br />entertainment and higher education</li>
-							<li>WordPress.com VIP partner</li>
-							<li>Hiring!</li>
-						</ul>
+						<h2>The Front End Build System</h2>
+						<p>Drew Machat / @negativev / alleyinteractive.com</p>
 					</section>
 				</section>
 
+        <section>
+          <h2>Covering:</h2>
+          <h3 class="fragment">the old tools</h3>
+          <h3 class="fragment">the new tools</h3>
+          <h3 class="fragment">what they do</h3>
+          <h3 class="fragment">the even newer tools</h3>
+        </section>
+
 				<section>
-					<h2>Basic Slide</h2>
-					<p>Slide content</p>
+					<h3>This still works...</h3>
+          <pre><code data-trim class="sh">
+compass compile
+
+compass watch
+          </code></pre>
+					<p></p>
+				</section>
+
+				<section>
+					<h3>...but</h3>
+          <h4>who likes rvm?</h4>
+          <p><pre>
+/usr/local/lib/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:135:in require': cannot load such file -- sass/script/node (LoadError)
+          from /usr/local/lib/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:135:inrescue in require' from /usr/local/lib/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:144:in require'
+          from /usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/sass_extensions/monkey_patches/browser_support.rb:1:in' from /usr/local/lib/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:55:in require'
+          from /usr/local/lib/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:55:inrequire' from /usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/sass_extensions/monkey_patches.rb:2:in block in <top (required)>'
+          from /usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/sass_extensions/monkey_patches.rb:1:ineach' from /usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/sass_extensions/monkey_patches.rb:1:in <top (required)>'
+          from /usr/local/lib/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:55:inrequire' from /usr/local/lib/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:55:in require'
+          from /usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/sass_extensions.rb:9:in' from /usr/local/lib/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:55:in require'
+          from /usr/bin/compass:23:in'
+          </pre></p>
 				</section>
 
 				<section class="center">
-					<h2>Vertically Centered Slide</h2>
-					<p>Slide content</p>
-				</section>
+					<h3>Front end = tooling</h3>
+          <ul>
+            <li class="fragment">Organize!</li>
+            <li class="fragment">Use new standards</li>
+            <li class="fragment">Lint your code</li>
+            <li class="fragment">Handles cross-browser issues</li>
+            <li class="fragment">Don't assume VIP</li>
+            <li class="fragment">Make your life easier</li>
+            <li class="fragment">Make everyone's life easier</li>
+          </ul>
+        </section>
 
-				<section>
-					<h2>Fragments</h2>
-					<ul>
-						<li class="fragment">Any element can get</li>
-						<li class="fragment">the fragment class</li>
-						<li class="fragment">and they show in sequence</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Slide with code</h2>
-					<pre><code data-trim contenteditable class="php">
-echo 'This slide has code';
-// and it's even editable
-					</code></pre>
+        <section>
+          <img src="https://pbs.twimg.com/media/BuHwAjcIUAAIqNI.png"></img>
 				</section>
 
 				<section class="center">
-					<h2>The End</h2>
-
-					<p><br />Want to become a better developer?<br />We're hiring.</p>
-					<p>info@alleyinteractive.com</p>
+					<h3>maybe more like this?</h3>
+          <img src="images/pile-of-tools.jpg" height="500"></img>
 				</section>
+
+        <section class="center">
+          <h3>good tools shouldn't be hard</h3>
+          <p>Commonly used grunt tasks were added to the wp-starter-theme to standardize the build process, and make it easy to get started.</p>
+          <img class="fragment" src="images/npm.png" style="background:none; border:none; box-shadow:none; width: 30%; float: left; margin-left: 5%; padding-top: 100px;"></img>
+          <img class="fragment" src="images/grunt.png" style="background:none; border:none; box-shadow:none; width: 30%; float: left;"></img>
+          <img class="fragment" src="images/bower.png" style="background:none; border:none; box-shadow:none; width: 30%; float: left;"></img>
+        </section>
+
+        <section class="center">
+          <h3>Why grunt?</h3>
+          <ul>
+            <li class="fragment">Large ecosystem</li>
+            <li class="fragment">Widely used</li>
+            <li class="fragment">It's (mostly) just JSON</li>
+          </ul>
+        </section>
+
+        <section class="center">
+          <h3>wp starter theme</h3>
+          <p><a href="https://github.com/alleyinteractive/wp-starter-theme">github.com/alleyinteractive/wp-starter-theme</a></p>
+          <p>Use <code>npm install</code> to install the node modules you'll need to run grunt.</p>
+          <br />
+          <pre><code data-trim class="bash">
+package.json
+Gruntfile.js
+node_modules/
+client/
+  - grunt/
+  - images/
+  - js/
+  - sass/
+          </code></pre>
+          <small>Note: <i>The <code>node_modules</code> folder should not be committed to version control</i></small>
+          <p>Two commands run the tasks to compile your source files:</p>
+          <pre><code data-trim class="bash">
+# watches your source files for changes to trigger compile
+grunt watch
+
+# compile with minification or production-specific settings
+grunt build
+          </code></pre>
+        </section>
+        
+        <section class="center">
+          <h3>Under the hood</h3>
+          <p>Tasks are split up into module specific config structures. There are tons of other available grunt modules, this just gives us the basics.</p>
+          <pre><code data-trim class="bash">
+client/grunt/
+  - compass.json
+  - concat.json
+  - cssmin.json
+  - imagemin.json
+  - jshint.json
+  - postcss.js
+  - scsslint.json
+  - uglify.json
+          </code></pre>
+        </section>
+
+        <section class="center">
+          <h3>More possibilities</h3>
+          <ul>
+            <li class="fragment">HTML templates and minification</li>
+            <li class="fragment">Javascript preprocessor</li>
+            <li class="fragment">SVG minification</li>
+            <li class="fragment">Testing</li>
+            <li class="fragment">Reports</li>
+            <li class="fragment">Versioning</li>
+          </ul>
+        </section>
+
+        <section class="center">
+          <h3>More tasks</h3>
+          <p>Adding tasks is easy. <code>load-grunt-config</code> automatically discovers installed modules and their config files.</p>
+          <pre><code data-trim class="bash">
+# install a new grunt module and add it to package.json
+npm install --save-dev grunt-contrib-htmlmin
+
+# provide a config file for the module
+vim client/grunt/htmlmin.json
+
+# run the 'htmlmin' task
+grunt htmlmin
+
+# optionally add 'htmlmin' task to a parent script like watch
+vim client/grunt/aliases.json
+          </code></pre>
+        </section>
+
+        <section class="center">
+          <h3>Chained tasks</h3>
+          <p>Some tasks need to be chained to be effective. For example, javascript files should be linted, concatenated and then minified.</p>
+          <pre><code data-trim class="json">
+{
+  "scripts": [
+    "jshint",
+    "concat",
+    "uglify"
+  ],
+  "styles": [
+    "scsslint",
+    "compass",
+    "postcss",
+    "cssmin",
+    "imagemin"
+  ],
+  "build": [
+    "scripts",
+    "styles"
+  ]
+}
+          </code></pre>
+          <small>Grunt requires some tedious gluing of things by hand, which is one reason people prefer an approach like the one taken by gulp</small>
+        </section>
+
+        <section class="center">
+          <h3>Grunt: the bad parts</h3>
+          <ul>
+            <li class="fragment">Slow</li>
+            <li class="fragment">Brittle</li>
+            <li class="fragment">Community momentum = <span style="color: red">&#9660;</span></li>
+            <li class="fragment">No pipes</li>
+            <li class="fragment">No dependency trees</li>
+            <li class="fragment">How old is it?? Gahh</li>
+          </ul>
+        </section>
+
+        <section class="center">
+          <img src="images/futurama.png"></img>
+          <h4>good thing we live in the future</h4>
+        </section>
+
+        <section class="center">
+          <ul>
+            <li>gulp</li>
+            <li>broccoli</li>
+            <li>brunch</li>
+            <li>duo</li>
+            <li>browserify</li>
+            <li>systemjs</li>
+          </ul>
+        </section>
+
+        <section class="center">
+          <img src="images/webpack.png" style="background:none; border:none; box-shadow:none;"></img>
+        </section>
+
+        <section class="center">
+          <h3>What is webpack?</h3>
+          <ul>
+            <li class="fragment">Fast</li>
+            <li class="fragment">Trees</li>
+            <li class="fragment">Bundle assets</li>
+            <li class="fragment">Loaders/Transformers</li>
+            <li class="fragment">Code optimization</li>
+          </ul>
+        </section>
+
+        <section class="center">
+          <h3>An example</h3>
+          <small>template.html</small>
+          <pre><code data-trim class="html">
+<div class="banner">
+  <h1>{{ title }}</h1>
+  <img src="banner.png"></img>
+</div>
+          </code></pre>
+          <small>component.js</small>
+          <pre><code data-trim class="javascript">
+var template = require('./template.html'),
+    compiled = Handlebars.compile(template),
+    context = { title: 'Webpack Wins' },
+    html = compiled(context);
+
+document.body.appendChild(html);
+          </code></pre>
+          <p>Webpack crawls the tree for both <code>require</code> and <code>src</code>, so in this example, requiring component.js will bundle the template, and the image defined in the template. You can specify a number of preprocessors (urlencoded images, cache busting filenames, js transpilation, source maps, etc) to run on each of these file types directly in the stream. Relative links will be converted to work in the static production folder.</p>
+        </section>
+
+        <section class="center">
+          <h3>More</h3>
+          <ul>
+            <li class="fragment">Common chunks</li>
+            <li class="fragment">Stylesheet output</li>
+            <li class="fragment">Module style interop</li>
+          </ul>
+        </section>
+
+				<section class="center">
+					<h1>;</h1>
+				</section>
+
+        <section class="center">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="https://github.com/alleyinteractive/wp-starter-theme/tree/master/client">The initial structure of the wp-starter-theme</a></li>
+            <li><a href="https://github.com/alleyinteractive/foodrepublic/blob/master/client/config/webpack.conf.js">Food Republic's Webpack Config</a></li>
+            <li><a href="http://dmachat.github.io/angular-webpack-cookbook/">Using webpack with angular (has some webpack specific information as well)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=VkTCL6Nqm6Y">Pete Hunt on using Webpack at Instagram</a></li>
+          </ul>
+        </section>
 
 			</div>
 
 			<img src="images/logo.png" alt="Alley Interactive" id="logo" />
-			<div id="hashtag">#hashtag</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
